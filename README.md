@@ -2,7 +2,7 @@
 
 > **Builder today. Founder-minded problem solver tomorrow.**
 
-A premium personal branding website built with vanilla HTML, CSS, and JavaScript. This portfolio presents the identity, work, social presence, and future vision of **Harsh Indian** — an educator, writer, and tech student from Haryana, India.
+A premium personal branding website built with vanilla HTML, CSS, and JavaScript. This portfolio presents the identity, work, social presence, and future vision of **Harsh Indian** — a former educator at Hartron, currently pursuing MCA at MMDU Mullana and teaching online.
 
 ## 🔗 Live Demo
 
@@ -132,7 +132,7 @@ emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", contactForm);
 
 ## 👤 About the Creator
 
-**Harsh Indian** is a tech student, educator at Hartron, and writer who believes in building practical projects that solve real problems. He uses "Indian" as his surname to reject caste-based identity and stand for national identity above all.
+**Harsh Indian** is a former educator at Hartron (1 year), now pursuing MCA at MMDU Mullana and teaching online — languages and computer-related topics. He believes in building practical projects that solve real problems and uses "Indian" as his surname to reject caste-based identity and stand for national identity above all.
 
 - 📧 Email: [harshwebdev015@gmail.com](mailto:harshwebdev015@gmail.com)
 - 🔗 LinkedIn: [Harsh Indian](https://www.linkedin.com/in/harsh-x-indian015/)
@@ -205,4 +205,4 @@ Short bio for the GitHub profile README (`Harsh-v3/Harsh-v3`):
 
 ### LinkedIn / Resume Headline
 
-> \*\*Frontend Developer | Educator at Hartron | BCA Graduate | Building Practical, Impact-Driven Web Solutions
+> **Frontend Developer | MCA Student at MMDU | Former Educator at Hartron | Teaching Languages & Computer Topics Online
