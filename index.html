@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A premium personal branding website presenting identity, work, social voice, and future vision."
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="email.js"></script>
+    <title>Harsh Indian | Personal Portfoli</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="ambient ambient-one"></div>
+      <div class="ambient ambient-two"></div>
+      <div class="ambient-grid"></div>
+
+      <header class="site-header">
+        <a class="site-header__brand" href="#home">
+          <span class="brand-mark">
+            <span class="brand-mark__ring"></span>
+            <span class="brand-mark__text">HI</span>
+          </span>
+          <span class="brand-name">Harsh Indian</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="site-header__actions">
+          <nav class="site-nav" id="primary-navigation" aria-label="Primary">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#vision">Future</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <a class="header-cta" href="assets/resume-placeholder.txt" download>
+            Resume
+          </a>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero section" id="home">
+          <div class="hero__content reveal">
+            <div class="hero__headline-block">
+              <h1>Harsh Indian</h1>
+              <p class="hero__intro">
+                I am a tech student trying to learn through real-world projects,
+                building step by step with a simple and practical approach.
+              </p>
+              <div class="hero__actions">
+                <a
+                  class="button button--primary"
+                  href="assets/resume-placeholder.txt"
+                  download
+                >
+                  Download Resume
+                </a>
+                <a class="button button--ghost" href="#contact">Contact Me</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-grid" id="about">
+          <div class="section-heading reveal">
+            <p class="eyebrow">About Me</p>
+          </div>
+
+          <div class="about-layout">
+            <article class="about-intro reveal">
+              <p class="about-lead">
+                Hi, I'm <strong>Harsh Indian</strong> from
+                <strong>Haryana, India</strong> - an <strong>educator</strong>,
+                <strong>writer</strong>, and <strong>tech student</strong> who
+                learns best by building practical work.
+              </p>
+            </article>
+
+            <div class="identity-card about-question glass-card reveal">
+              <p class="identity-card__prompt">Questions I Hear Often</p>
+              <p class="identity-question" aria-live="polite">
+                <span id="identity-question-text">
+                  Why do you write "Indian" after your name?
+                </span>
+              </p>
+              <p class="identity-answer-preview">
+                I use "Indian" because I do not want caste to define my
+                identity. I would rather be known by values, work, and the way I
+                think.
+              </p>
+              <div class="about-question__footer">
+                <p class="about-question__hint">
+                  Short answer here. Full context inside.
+                </p>
+                <button
+                  class="button button--ghost identity-dialog-open"
+                  type="button"
+                >
+                  Read Full Answer
+                </button>
+              </div>
+            </div>
+
+            <article
+              class="about-facts glass-card reveal"
+              aria-label="Quick Facts and Teaching Timeline"
+            >
+              <h3>Quick Facts About Me</h3>
+              <div class="about-facts__grid">
+                <article class="fact-item">
+                  <p>I completed my BCA from 2022 to 2025.</p>
+                </article>
+                <article class="fact-item">
+                  <p>Since 2025, I have been teaching at Hartron.</p>
+                </article>
+                <article class="fact-item">
+                  <p>
+                    I like real-world projects because they help me learn by
+                    doing.
+                  </p>
+                </article>
+                <article class="fact-item">
+                  <p>
+                    Teaching: Jun 2025 – Jul 2026 (Hartron). Currently doing MCA
+                    + online tech teaching.
+                  </p>
+                </article>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="skills">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Skills</p>
+            <h2>Organized by area so the stack is easier to scan.</h2>
+          </div>
+
+          <div class="skills-layout">
+            <div class="skills-groups">
+              <article class="skills-group-card glass-card reveal">
+                <span class="skills-group-card__label">Frontend</span>
+                <h3>Interface</h3>
+                <div class="skills-tools">
+                  <button
+                    class="skill-tool is-active"
+                    type="button"
+                    data-skill="html"
+                  >
+                    HTML
+                  </button>
+                  <button class="skill-tool" type="button" data-skill="css">
+                    CSS
+                  </button>
+                  <button class="skill-tool" type="button" data-skill="scss">
+                    SCSS
+                  </button>
+                  <button
+                    class="skill-tool"
+                    type="button"
+                    data-skill="javascript"
+                  >
+                    JavaScript
+                  </button>
+                  <button
+                    class="skill-tool"
+                    type="button"
+                    data-skill="frontend-dev"
+                  >
+                    Frontend Development
+                  </button>
+                </div>
+              </article>
+
+              <article class="skills-group-card glass-card reveal">
+                <span class="skills-group-card__label">Frameworks</span>
+                <h3>UI and CMS</h3>
+                <div class="skills-tools">
+                  <button
+                    class="skill-tool"
+                    type="button"
+                    data-skill="bootstrap"
+                  >
+                    Bootstrap
+                  </button>
+                  <button
+                    class="skill-tool"
+                    type="button"
+                    data-skill="tailwind"
+                  >
+                    Tailwind CSS
+                  </button>
+                  <button class="skill-tool" type="button" data-skill="jquery">
+                    jQuery
+                  </button>
+                  <button
+                    class="skill-tool"
+                    type="button"
+                    data-skill="wordpress"
+                  >
+                    WordPress
+                  </button>
+                </div>
+              </article>
+
+              <article class="skills-group-card glass-card reveal">
+                <span class="skills-group-card__label">Backend</span>
+                <h3>Logic and Programming</h3>
+                <div class="skills-tools">
+                  <button class="skill-tool" type="button" data-skill="nodejs">
+                    Node.js
+                  </button>
+                  <button class="skill-tool" type="button" data-skill="php">
+                    PHP
+                  </button>
+                  <button class="skill-tool" type="button" data-skill="python">
+                    Python
+                  </button>
+                  <button class="skill-tool" type="button" data-skill="java">
+                    Java
+                  </button>
+                  <button class="skill-tool" type="button" data-skill="c">
+                    C
+                  </button>
+                  <button class="skill-tool" type="button" data-skill="cpp">
+                    C++
+                  </button>
+                </div>
+              </article>
+
+              <article class="skills-group-card glass-card reveal">
+                <span class="skills-group-card__label">Databases & Tools</span>
+                <h3>Storage and Workflow</h3>
+                <div class="skills-tools">
+                  <button class="skill-tool" type="button" data-skill="mysql">
+                    MySQL
+                  </button>
+                  <button class="skill-tool" type="button" data-skill="git">
+                    Git
+                  </button>
+                  <button class="skill-tool" type="button" data-skill="vscode">
+                    VS Code
+                  </button>
+                  <button class="skill-tool" type="button" data-skill="canva">
+                    Canva
+                  </button>
+                  <button
+                    class="skill-tool"
+                    type="button"
+                    data-skill="ai-tools"
+                  >
+                    AI Tools
+                  </button>
+                </div>
+              </article>
+
+              <article class="skills-group-card glass-card reveal">
+                <span class="skills-group-card__label">Systems</span>
+                <h3>OS and Networking</h3>
+                <div class="skills-tools">
+                  <button
+                    class="skill-tool"
+                    type="button"
+                    data-skill="networking"
+                  >
+                    Networking
+                  </button>
+                  <button class="skill-tool" type="button" data-skill="linux">
+                    Linux
+                  </button>
+                  <button class="skill-tool" type="button" data-skill="kali">
+                    Kali Linux
+                  </button>
+                  <button class="skill-tool" type="button" data-skill="ubuntu">
+                    Ubuntu
+                  </button>
+                  <button class="skill-tool" type="button" data-skill="windows">
+                    Windows OS
+                  </button>
+                  <button
+                    class="skill-tool"
+                    type="button"
+                    data-skill="technical-knowledge"
+                  >
+                    Technical Knowledge
+                  </button>
+                </div>
+              </article>
+
+              <article class="skills-group-card glass-card reveal">
+                <span class="skills-group-card__label">Practical Skills</span>
+                <h3>Delivery and Communication</h3>
+                <div class="skills-tools">
+                  <button
+                    class="skill-tool"
+                    type="button"
+                    data-skill="digital-marketing"
+                  >
+                    Digital Marketing
+                  </button>
+                  <button
+                    class="skill-tool"
+                    type="button"
+                    data-skill="teaching"
+                  >
+                    Teaching
+                  </button>
+                  <button
+                    class="skill-tool"
+                    type="button"
+                    data-skill="communication"
+                  >
+                    Communication
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="projects">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Projects</p>
+            <h2>
+              Practical builds, learning projects, and future ideas shaped by
+              real use cases.
+            </h2>
+          </div>
+
+          <div
+            class="project-controls-and-pagination reveal"
+            role="region"
+            aria-label="Project categories and pagination"
+          >
+            <div
+              class="project-controls"
+              role="tablist"
+              aria-label="Project categories"
+            >
+              <button
+                class="project-filter is-active"
+                type="button"
+                data-filter="all"
+              >
+                All
+              </button>
+              <button
+                class="project-filter"
+                type="button"
+                data-filter="completed"
+              >
+                Completed
+              </button>
+              <button
+                class="project-filter"
+                type="button"
+                data-filter="practice"
+              >
+                Practice
+              </button>
+              <button
+                class="project-filter"
+                type="button"
+                data-filter="upcoming"
+              >
+                Upcoming
+              </button>
+            </div>
+
+            <div class="projects-pagination" aria-label="Projects pagination">
+              <button
+                class="projects-page-btn"
+                type="button"
+                id="projects-prev"
+                aria-label="Previous projects"
+              >
+                Prev
+              </button>
+              <span class="projects-page-indicator" id="projects-page-indicator"
+                >Page 1</span
+              >
+              <button
+                class="projects-page-btn"
+                type="button"
+                id="projects-next"
+                aria-label="Next projects"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+
+          <div class="projects-grid" id="projects-grid">
+            <article
+              id="project-infinite-scroll-website"
+              class="project-card glass-card reveal"
+              data-category="completed"
+            >
+              <span class="project-card__badge">Completed Project</span>
+              <h3>Infinite Scroll Website</h3>
+              <p>
+                A JavaScript-based image browsing experience where new visuals
+                keep loading as the user scrolls. It uses an image API with
+                HTML, CSS, and JavaScript to create a continuous feed.
+              </p>
+              <ul class="project-meta">
+                <li>Tech: HTML, CSS, JavaScript, API</li>
+                <li>Focus: API handling, scroll events, dynamic rendering</li>
+              </ul>
+            </article>
+
+            <article
+              id="project-quiz-game"
+              class="project-card glass-card reveal"
+              data-category="practice"
+            >
+              <span class="project-card__badge">Practice Project</span>
+              <h3>Quiz Game</h3>
+              <p>
+                A technical quiz application with positive scoring, negative
+                marking, and a leaderboard saved in local storage.
+              </p>
+              <ul class="project-meta">
+                <li>Tech: HTML, CSS, JavaScript</li>
+                <li>Focus: Questions, scoring, local storage</li>
+              </ul>
+            </article>
+
+            <article
+              id="project-ebook-website"
+              class="project-card glass-card reveal"
+              data-category="practice"
+            >
+              <span class="project-card__badge">Practice Project</span>
+              <h3>E-Book Website</h3>
+              <p>
+                A responsive e-book style website created while practicing
+                Bootstrap layout, components, spacing, and section design.
+              </p>
+              <ul class="project-meta">
+                <li>Tech: HTML, CSS, Bootstrap</li>
+                <li>Focus: Bootstrap practice and responsive UI</li>
+              </ul>
+            </article>
+
+            <article
+              id="project-public-welfare-website"
+              class="project-card glass-card reveal"
+              data-category="upcoming"
+            >
+              <span class="project-card__badge">Upcoming Idea</span>
+              <h3>Public Welfare Website</h3>
+              <p>
+                A service-oriented platform concept for organizing helpful
+                information, support resources, and access points for a focused
+                public community.
+              </p>
+            </article>
+
+            <article
+              id="project-darkworld4girls"
+              class="project-card glass-card reveal"
+              data-category="upcoming"
+            >
+              <span class="project-card__badge">Upcoming Idea</span>
+              <h3>Safe Voice Network</h3>
+              <p>
+                A private, supportive community where women can share safely,
+                transform sensitive stories into structured insights, and
+                strengthen learning, prevention, and responsible action.
+              </p>
+            </article>
+
+            <article
+              id="project-student-learning-platform"
+              class="project-card glass-card reveal"
+              data-category="upcoming"
+            >
+              <span class="project-card__badge">Upcoming Idea</span>
+              <h3>Student Learning Platform</h3>
+              <p>
+                A student-focused learning platform concept built around
+                affordable access, practical courses, and skill-first growth.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="interests">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Hobbies &amp; Interests</p>
+            <h2>
+              The interests that shape my perspective and creative energy.
+            </h2>
+          </div>
+
+          <div class="interest-grid">
+            <article class="interest-card glass-card reveal">Writing</article>
+            <article class="interest-card glass-card reveal">
+              Technology Exploration
+            </article>
+            <article class="interest-card glass-card reveal">Music</article>
+            <article class="interest-card glass-card reveal">
+              Social Awareness
+            </article>
+            <article class="interest-card glass-card reveal">
+              Content Creation
+            </article>
+          </div>
+        </section>
+
+        <section class="section section-grid" id="vision">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Future Vision</p>
+            <h2>
+              What I want to build is larger than code. It is about systems that
+              change lives.
+            </h2>
+          </div>
+
+          <div class="vision-panel glass-card reveal">
+            <div class="vision-panel__lead">
+              <h3>Builder today. Founder-minded problem solver tomorrow.</h3>
+              <p>
+                I want to create products and platforms that respond to urgent
+                social realities while still meeting professional standards of
+                execution, trust, and scale. My aim is to build work that is
+                respected not only for how it looks, but for how deeply it
+                helps.
+              </p>
+            </div>
+            <div class="vision-roadmap">
+              <article>
+                <span>01</span>
+                <h4>Build useful digital products</h4>
+                <p>
+                  Create solutions for safety, access, awareness, and
+                  opportunity.
+                </p>
+              </article>
+              <article>
+                <span>02</span>
+                <h4>Grow voice and leadership</h4>
+                <p>
+                  Use communication, writing, and public thought to influence
+                  positive change.
+                </p>
+              </article>
+              <article>
+                <span>03</span>
+                <h4>Launch meaningful initiatives</h4>
+                <p>
+                  Move from projects to platforms that can serve people at
+                  scale.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="principles">
+          <div class="section-heading reveal">
+            <p class="eyebrow">My Principles</p>
+            <h2>
+              The values I want every project and decision to carry forward.
+            </h2>
+          </div>
+
+          <div class="principles-grid">
+            <article class="principle-card glass-card reveal">
+              <h3>Honesty</h3>
+              <p>
+                Say what is real, build what is useful, and stay grounded in
+                truth.
+              </p>
+            </article>
+            <article class="principle-card glass-card reveal">
+              <h3>Discipline</h3>
+              <p>Consistency matters more than bursts of motivation.</p>
+            </article>
+            <article class="principle-card glass-card reveal">
+              <h3>Meaningful Work</h3>
+              <p>Create things that solve something worth solving.</p>
+            </article>
+            <article class="principle-card glass-card reveal">
+              <h3>Social Responsibility</h3>
+              <p>Technology should reduce harm, not ignore it.</p>
+            </article>
+            <article class="principle-card glass-card reveal">
+              <h3>Growth Mindset</h3>
+              <p>Learn openly, adapt quickly, and keep refining the craft.</p>
+            </article>
+            <article class="principle-card glass-card reveal">
+              <h3>Respect for People</h3>
+              <p>
+                The best systems are designed with empathy, dignity, and care.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section quote-section" id="quote">
+          <article class="quote-card glass-card reveal">
+            <p class="eyebrow">Personal Quote</p>
+            <blockquote>
+              Technology should not only impress people, it should help people.
+            </blockquote>
+          </article>
+        </section>
+
+        <section class="section" id="socials">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Social Presence</p>
+            <h2>Where to find my work, voice, and professional journey.</h2>
+          </div>
+
+          <div class="social-grid">
+            <a
+              class="social-card glass-card reveal"
+              href="https://www.instagram.com/harshxindian/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>Instagram</span>
+              <strong>@Harshxindian</strong>
+            </a>
+            <a
+              class="social-card glass-card reveal"
+              href="https://www.linkedin.com/in/harsh-x-indian015/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>LinkedIn</span>
+              <strong>Harsh Indian</strong>
+            </a>
+            <a
+              class="social-card glass-card reveal"
+              href="https://github.com/Harsh-v3"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>GitHub</span>
+              <strong>Harsh-v3</strong>
+            </a>
+            <a
+              class="social-card glass-card reveal"
+              href="https://www.youtube.com/@harshxindian"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>YouTube</span>
+              <strong>Harshxindian</strong>
+            </a>
+            <a
+              class="social-card glass-card reveal"
+              href="mailto:harshwebdev015@gmail.com"
+            >
+              <span>Email</span>
+              <strong>harshwebdev015@gmail.com</strong>
+            </a>
+            <a
+              class="social-card glass-card reveal"
+              href="https://harshxindian.github.io"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>Website</span>
+              <strong>harshxindian.github.io</strong>
+            </a>
+          </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Contact</p>
+            <h2>Let's build something meaningful together.</h2>
+          </div>
+
+          <div class="contact-layout">
+            <article class="contact-copy glass-card reveal">
+              <h3>
+                Open to ideas, collaborations, and conversations that matter.
+              </h3>
+              <p>
+                Whether it is a project, an opportunity, a social initiative, or
+                a thoughtful discussion, I want this space to invite meaningful
+                connection.
+              </p>
+              <div class="contact-signals">
+                <span>Available for projects</span>
+                <span>Open to internships</span>
+                <span>Interested in impact-driven work</span>
+              </div>
+            </article>
+
+            <form class="contact-form glass-card reveal" id="contact-form">
+              <label>
+                <span>Name</span>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                />
+              </label>
+              <label>
+                <span>Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="your@email.com"
+                  required
+                />
+              </label>
+              <label>
+                <span>Message</span>
+                <textarea
+                  name="message"
+                  rows="5"
+                  placeholder="Tell me what you want to build, solve, or discuss."
+                  required
+                ></textarea>
+              </label>
+              <button class="button button--primary" type="submit">
+                Send Message
+              </button>
+              <p class="form-note" id="contact-status" aria-live="polite"></p>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <dialog
+        class="identity-dialog"
+        id="identity-dialog"
+        aria-labelledby="identity-dialog-title"
+      >
+        <div class="identity-dialog__surface">
+          <div class="identity-dialog__toolbar">
+            <p class="eyebrow">Full Answer</p>
+            <button
+              class="identity-dialog__close"
+              type="button"
+              aria-label="Close dialog"
+            >
+              <span
+                class="identity-dialog__close-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="identity-dialog__close-label">Close</span>
+            </button>
+          </div>
+          <h2 id="identity-dialog-title">
+            Why I choose "Indian" over caste identity
+          </h2>
+          <div class="identity-dialog__body">
+            <p>
+              I do not write "Indian" because I think I am more Indian than
+              anyone else, or because I want to prove something. I write it
+              because I do not believe in defining myself through caste, and I
+              refuse to let inherited labels decide identity.
+            </p>
+            <p>
+              For me, the nation comes first, and everything else comes after
+              that. Many people proudly attach their caste to their name and
+              then celebrate the achievements of someone from that same caste as
+              if it is a shared victory.
+            </p>
+            <p>
+              But then one honest question follows: when someone from that same
+              caste is involved in rape, corruption, or betrayal of the country,
+              why does that collective pride suddenly go silent? If people are
+              ready to claim the credit, should they not also face the
+              accountability?
+            </p>
+            <p>
+              That is why "Indian" feels far more honest to me than any caste
+              title. And if someone says a caste name brings support from its
+              own people, then "Indian" is an even greater strength, because the
+              nation is larger than any caste.
+            </p>
+          </div>
+        </div>
+      </dialog>
+
+      <footer class="site-footer">
+        <p>Harsh Indian</p>
+        <p>
+          Building systems, shaping ideas, and standing for meaningful change.
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
