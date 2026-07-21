@@ -1,4 +1,4 @@
-# Harsh Indian — Personal Brand Portfolio
+# Harsh Indian — Personal Portfolio
 
 > **Builder today. Founder-minded problem solver tomorrow.**
 
