@@ -1,4 +1,4 @@
-# Harsh Indian — Personal Portfolio
+# Harsh Indian — Personal Brand Portfolio
 
 > **Builder today. Founder-minded problem solver tomorrow.**
 
@@ -169,3 +169,40 @@ This project is open source and available under the [MIT License](LICENSE).
 <p align="center">
   Built with ❤️ by <strong>Harsh Indian</strong>
 </p>
+
+---
+
+## 🏷️ GitHub Profile Setup
+
+### Repository Description
+
+> Personal portfolio website — Dark-themed glassmorphism UI built with vanilla HTML, CSS & JavaScript showcasing skills, projects, and vision.
+
+### Topics
+
+| Topic                  | Context                        |
+| ---------------------- | ------------------------------ |
+| `portfolio`            | Personal portfolio website     |
+| `personal-website`     | Individual branding site       |
+| `portfolio-website`    | Career/project showcase        |
+| `vanilla-js`           | Pure JavaScript (no framework) |
+| `vanilla-css`          | Pure CSS (no framework)        |
+| `glassmorphism`        | Glassmorphism design trend     |
+| `responsive-design`    | Mobile-first responsive layout |
+| `dark-theme`           | Dark mode UI                   |
+| `emailjs`              | EmailJS integration            |
+| `frontend-development` | Frontend project               |
+| `web-development`      | Web development project        |
+| `html-css-javascript`  | Core web stack                 |
+| `personal-branding`    | Personal brand presence        |
+| `harsh-indian`         | Personal brand name            |
+
+### GitHub Profile README
+
+Short bio for the GitHub profile README (`Harsh-v3/Harsh-v3`):
+
+> **Harsh Indian** — Educator, writer & tech student building practical projects that solve real problems. I use "Indian" to reject caste identity and stand for national identity. Portfolio: [harshxindian.github.io](https://harshxindian.github.io)
+
+### LinkedIn / Resume Headline
+
+> \*\*Frontend Developer | Educator at Hartron | BCA Graduate | Building Practical, Impact-Driven Web Solutions
