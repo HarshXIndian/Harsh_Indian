@@ -12,21 +12,46 @@ A premium personal branding website built with vanilla HTML, CSS, and JavaScript
 
 ## ✨ Features
 
+### 🌓 Dark & Light Theme
+
+- **Full theme toggle** — switch between dark and light mode with a single click
+- **Persistent preference** — theme choice is saved to `localStorage` across sessions
+- **Dual toggle locations** — toggle button in both the header (compact icon) and footer (with track switch)
+- **Synced icons** — moon/sun icons swap in both locations simultaneously
+- **Complete CSS variable system** — over 70 custom properties control all colors, backgrounds, borders, and shadows for each theme
+
+### 🖱️ Scroll-to-Top Button
+
+- **Progress indicator** — circular SVG ring fills as you scroll down the page
+- **Smooth reveal** — appears after scrolling 400px with a fade + scale animation
+- **Instant reset** — clicking scrolls to top and resets the progress ring
+
+### 🎨 Interactive UI & Animations
+
 - **Dark-themed glassmorphism UI** — modern aesthetic with ambient gradients, blur effects, and grid overlays
-- **Responsive design** — works seamlessly across desktop, tablet, and mobile
 - **Scroll-triggered reveal animations** — powered by IntersectionObserver (respects `prefers-reduced-motion`)
+- **Rotating identity questions** — cycles through common questions every 3.6 seconds in the About section
+- **Quote carousel** — two personal quotes rotate every 5 seconds with a smooth fade + slide transition
+- **Skills catalog** — interactive skill buttons organized into 6 categories; click to highlight active skill
+- **Filterable & paginated project gallery** — filter by All / Completed / Practice / Upcoming with 5 projects per page and exit/enter animations
+
+### 📱 Responsive Design
+
+- **Seamless across all devices** — works on desktop, tablet, and mobile
+- **Three breakpoints** — 1080px (tablet), 820px (small tablet), 560px (mobile)
+- **Mobile hamburger menu** — smooth open/close with animated hamburger-to-close transition
+- **Adaptive layouts** — footer grid restructures from 4-column to 2×2 to single-column as viewport shrinks
+
+### 🧩 Additional Features
+
 - **Sticky header with scroll-aware styling** — morphs between rounded pill and compact card states
 - **Active navigation highlighting** — current section automatically detected on scroll
-- **Mobile hamburger menu** — smooth open/close with animated hamburger-to-close transition
 - **Identity dialog** — custom `<dialog>` element explaining the choice of "Indian" over caste identity
-- **Rotating identity questions** — cycles through common questions every 3.6 seconds in the About section
-- **Skills catalog** — interactive skill buttons organized into 6 categories (Frontend, Frameworks, Backend, Databases & Tools, Systems, Practical Skills)
-- **Filterable project gallery** — filter projects by All / Completed / Practice / Upcoming
-- **Paginated projects** — 5 projects per page with prev/next navigation and exit/enter animations
 - **Contact form** — integrated with **EmailJS** for sending messages directly from the site
-- **Social presence grid** — links to Instagram, LinkedIn, GitHub, YouTube, Email, and website
+- **Social presence grid** — links to Instagram, LinkedIn, GitHub, YouTube, Email, WhatsApp, and website
 - **Principles & Vision roadmap** — personal values and future goals presented in card layouts
 - **Resume download** — downloadable resume placeholder
+- **Responsive footer** — grid adapts from 4 columns → 2×2 → single column with balanced layout
 
 ---
 
@@ -105,7 +130,8 @@ emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", contactForm);
 
 ## 🎨 Design Highlights
 
-- **Color Palette**: Deep navy background (`#060914`), teal accent (`#8cd6c1`), gold accent (`#e0bb7a`)
+- **Color Palette (Dark)**: Deep navy background (`#060914`), teal accent (`#8cd6c1`), gold accent (`#e0bb7a`)
+- **Color Palette (Light)**: Soft off-white background (`#eef1f6`), deeper teal (`#1a7a6a`), muted gold (`#b88a3a`)
 - **Typography**: Serif headings (Palatino/Georgia) for elegance + sans-serif body (Aptos/Segoe UI) for readability
 - **Glass Cards**: `backdrop-filter: blur()` with semi-transparent backgrounds and subtle borders
 - **Ambient Lighting**: Fixed radial gradients create atmospheric depth
@@ -124,9 +150,22 @@ emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", contactForm);
 | 5   | **Hobbies & Interests** | Writing, music, tech exploration, etc.                   |
 | 6   | **Future Vision**       | 3-point roadmap: products, voice, initiatives            |
 | 7   | **Principles**          | 6 core values with descriptions                          |
-| 8   | **Quote**               | Personal philosophy statement                            |
+| 8   | **Quote**               | Rotating personal philosophy quotes (carousel)           |
 | 9   | **Social Presence**     | Links to all platforms                                   |
 | 10  | **Contact**             | EmailJS-powered contact form                             |
+
+---
+
+## 🆕 What's New (Latest Updates)
+
+- **Dark / Light theme toggle** — complete dual-theme support with CSS custom properties and persistent storage
+- **Scroll-to-top button** — circular progress indicator that fills as you scroll
+- **Quote carousel** — two quotes rotate with smooth fade animation every 5 seconds
+- **Responsive footer improvements** — 2×2 grid layout between 1080px–560px for better readability
+- **Header theme toggle button** — compact icon button in the header for quick theme switching
+- **Improved accessibility** — better ARIA labels, focus outlines, and prefers-reduced-motion support
+- **CSS variable refactoring** — 70+ custom properties for easier theming and maintenance
+- **Mobile navigation fixes** — light theme compatibility for mobile dropdown and hamburger menu
 
 ---
 
@@ -144,7 +183,6 @@ emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", contactForm);
 
 ## 🌱 Future Improvements
 
-- [ ] Dark/light theme toggle
 - [ ] Blog section with markdown articles
 - [ ] Project detail pages with live demos
 - [ ] Testimonials / recommendations section
@@ -176,7 +214,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ### Repository Description
 
-> Personal portfolio website — Dark-themed glassmorphism UI built with vanilla HTML, CSS & JavaScript showcasing skills, projects, and vision.
+> Personal portfolio website — Dark/Light themed glassmorphism UI built with vanilla HTML, CSS & JavaScript showcasing skills, projects, and vision.
 
 ### Topics
 
@@ -190,6 +228,8 @@ This project is open source and available under the [MIT License](LICENSE).
 | `glassmorphism`        | Glassmorphism design trend     |
 | `responsive-design`    | Mobile-first responsive layout |
 | `dark-theme`           | Dark mode UI                   |
+| `light-theme`          | Light mode UI                  |
+| `theme-toggle`         | Dark/light theme switch        |
 | `emailjs`              | EmailJS integration            |
 | `frontend-development` | Frontend project               |
 | `web-development`      | Web development project        |
@@ -205,4 +245,4 @@ Short bio for the GitHub profile README (`Harsh-v3/Harsh-v3`):
 
 ### LinkedIn / Resume Headline
 
-> **Frontend Developer | MCA Student at MMDU | Former Educator at Hartron | Teaching Languages & Computer Topics Online
+> **Frontend Developer | MCA Student at MMDU | Former Educator at Hartron | Teaching Languages & Computer Topics Online**

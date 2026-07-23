@@ -543,9 +543,15 @@ const setCurrentLink = () => {
   });
 };
 
+let scrollRafId = null;
+
 const handleScroll = () => {
-  syncHeaderState();
-  setCurrentLink();
+  if (scrollRafId) return;
+  scrollRafId = window.requestAnimationFrame(() => {
+    syncHeaderState();
+    setCurrentLink();
+    scrollRafId = null;
+  });
 };
 
 window.addEventListener("scroll", handleScroll, { passive: true });
@@ -727,4 +733,153 @@ if (contactForm) {
         }
       });
   });
+}
+
+// --- Quote carousel ---
+const quoteTextEl = document.querySelector("#quote-text");
+const quotes = [
+  "Technology should not only impress people, it should help people.",
+  'Education should be free or at least cheaper than shoes <i style="display:block;margin-top:0.6em;opacity:0.7;font-size:0.7em;font-style:italic;">- Harsh Indian</i>',
+];
+let quoteIndex = 0;
+
+if (
+  quoteTextEl &&
+  !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+) {
+  // Set initial quote
+  quoteTextEl.innerHTML = quotes[0];
+
+  window.setInterval(() => {
+    quoteIndex = (quoteIndex + 1) % quotes.length;
+    quoteTextEl.style.transition = "opacity 300ms ease, transform 300ms ease";
+    quoteTextEl.style.opacity = "0";
+    quoteTextEl.style.transform = "translateY(8px)";
+
+    window.setTimeout(() => {
+      quoteTextEl.innerHTML = quotes[quoteIndex];
+      quoteTextEl.style.opacity = "1";
+      quoteTextEl.style.transform = "translateY(0)";
+    }, 320);
+  }, 5000);
+} else if (quoteTextEl) {
+  quoteTextEl.innerHTML = quotes[0];
+}
+
+// --- Scroll to top button ---
+const scrollTopBtn = document.querySelector("#scroll-top");
+const scrollTopProgress = document.querySelector(".scroll-top__progress");
+const SCROLL_TOP_RADIUS = 23;
+const SCROLL_TOP_CIRCUMFERENCE = 2 * Math.PI * SCROLL_TOP_RADIUS; // ~144.5
+
+if (scrollTopBtn && scrollTopProgress) {
+  scrollTopProgress.style.strokeDasharray = SCROLL_TOP_CIRCUMFERENCE;
+  scrollTopProgress.style.strokeDashoffset = SCROLL_TOP_CIRCUMFERENCE;
+
+  let scrollTopRafId = null;
+
+  const updateScrollTop = () => {
+    const scrollTop = window.scrollY;
+    const docHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+
+    // Show button after scrolling ~400px
+    if (scrollTop > 400) {
+      scrollTopBtn.classList.add("is-visible");
+    } else {
+      scrollTopBtn.classList.remove("is-visible");
+    }
+
+    // Fill progress circle based on scroll percentage
+    if (docHeight > 0) {
+      const progress = Math.min(scrollTop / docHeight, 1);
+      const offset = SCROLL_TOP_CIRCUMFERENCE * (1 - progress);
+      scrollTopProgress.style.strokeDashoffset = offset;
+    } else {
+      scrollTopProgress.style.strokeDashoffset = SCROLL_TOP_CIRCUMFERENCE;
+    }
+  };
+
+  const handleScrollTopScroll = () => {
+    if (scrollTopRafId) return;
+    scrollTopRafId = window.requestAnimationFrame(() => {
+      updateScrollTop();
+      scrollTopRafId = null;
+    });
+  };
+
+  window.addEventListener("scroll", handleScrollTopScroll, { passive: true });
+  updateScrollTop();
+
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    // Reset circle fill instantly
+    scrollTopProgress.style.strokeDashoffset = SCROLL_TOP_CIRCUMFERENCE;
+    scrollTopBtn.classList.remove("is-visible");
+  });
+}
+
+// --- Theme toggle ---
+const themeToggle = document.querySelector("#theme-toggle");
+const headerThemeToggle = document.querySelector("#header-theme-toggle");
+const themeIcon = document.querySelector("#theme-toggle-icon");
+const moonIcon = themeIcon?.querySelector(".theme-toggle__moon");
+const sunIcon = themeIcon?.querySelector(".theme-toggle__sun");
+const headerMoon = headerThemeToggle?.querySelector(
+  ".header-theme-toggle__moon",
+);
+const headerSun = headerThemeToggle?.querySelector(".header-theme-toggle__sun");
+
+const applyTheme = (isLight) => {
+  if (isLight) {
+    document.documentElement.classList.add("light-theme");
+  } else {
+    document.documentElement.classList.remove("light-theme");
+  }
+  // Swap footer icons
+  if (moonIcon && sunIcon) {
+    moonIcon.style.display = isLight ? "none" : "block";
+    sunIcon.style.display = isLight ? "block" : "none";
+  }
+  // Swap header icons
+  if (headerMoon && headerSun) {
+    headerMoon.style.display = isLight ? "none" : "block";
+    headerSun.style.display = isLight ? "block" : "none";
+  }
+};
+
+const getStoredTheme = () => {
+  try {
+    return localStorage.getItem("theme") === "light";
+  } catch {
+    return false;
+  }
+};
+
+const storeTheme = (isLight) => {
+  try {
+    localStorage.setItem("theme", isLight ? "light" : "dark");
+  } catch {
+    // localStorage unavailable
+  }
+};
+
+// Initialize from stored preference
+const storedLight = getStoredTheme();
+applyTheme(storedLight);
+
+const handleThemeToggle = () => {
+  const currentlyLight =
+    document.documentElement.classList.contains("light-theme");
+  const newLight = !currentlyLight;
+  applyTheme(newLight);
+  storeTheme(newLight);
+};
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", handleThemeToggle);
+}
+
+if (headerThemeToggle) {
+  headerThemeToggle.addEventListener("click", handleThemeToggle);
 }
