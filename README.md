@@ -1,8 +1,8 @@
-# Harsh Indian — Personal Brand Portfolio
+# Harsh Indian — Portfolio
 
 > **Builder today. Founder-minded problem solver tomorrow.**
 
-A premium personal branding website built with vanilla HTML, CSS, and JavaScript. This portfolio presents the identity, work, social presence, and future vision of **Harsh Indian** — a former educator at Hartron, currently pursuing MCA at MMDU Mullana and teaching online.
+A portfolio website built with vanilla HTML, CSS, and JavaScript. This site presents the identity, work, social presence, and future vision of **Harsh Indian** — a former educator at Hartron, currently pursuing MCA at MMDU Mullana and teaching online.
 
 ## 🔗 Live Demo
 
@@ -214,14 +214,14 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ### Repository Description
 
-> Personal portfolio website — Dark/Light themed glassmorphism UI built with vanilla HTML, CSS & JavaScript showcasing skills, projects, and vision.
+> Portfolio website — Dark/Light themed glassmorphism UI built with vanilla HTML, CSS & JavaScript showcasing skills, projects, and vision.
 
 ### Topics
 
 | Topic                  | Context                        |
 | ---------------------- | ------------------------------ |
 | `portfolio`            | Personal portfolio website     |
-| `personal-website`     | Individual branding site       |
+| `personal-website`     | Individual website             |
 | `portfolio-website`    | Career/project showcase        |
 | `vanilla-js`           | Pure JavaScript (no framework) |
 | `vanilla-css`          | Pure CSS (no framework)        |
@@ -234,8 +234,7 @@ This project is open source and available under the [MIT License](LICENSE).
 | `frontend-development` | Frontend project               |
 | `web-development`      | Web development project        |
 | `html-css-javascript`  | Core web stack                 |
-| `personal-branding`    | Personal brand presence        |
-| `harsh-indian`         | Personal brand name            |
+| `harsh-indian`         | Personal name                  |
 
 ### GitHub Profile README
 

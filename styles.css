@@ -1337,6 +1337,10 @@ textarea {
   -webkit-backdrop-filter: blur(10px);
 }
 
+.light-theme .identity-dialog::backdrop {
+  background: rgba(200, 204, 214, 0.76);
+}
+
 .identity-dialog__surface {
   position: relative;
   display: flex;
@@ -1345,16 +1349,16 @@ textarea {
   max-height: calc(100dvh - 56px);
   padding: 0;
   border-radius: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--line);
   background:
     radial-gradient(
       circle at top right,
       rgba(224, 187, 122, 0.12),
       transparent 28%
     ),
-    linear-gradient(180deg, rgba(14, 20, 36, 0.96), rgba(8, 12, 22, 0.98));
-  background-color: #0e1424;
-  box-shadow: 0 34px 80px rgba(0, 0, 0, 0.42);
+    linear-gradient(180deg, var(--glass-bg-color), var(--body-bg-end));
+  background-color: var(--glass-bg-color);
+  box-shadow: var(--shadow-dialog);
   overflow: hidden;
 }
 
@@ -1365,8 +1369,9 @@ textarea {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  background: rgba(10, 16, 29, 0.9);
+  border-bottom: 1px solid var(--line);
+  background: var(--header-bg);
+  background-color: var(--header-bg-color);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
@@ -1381,9 +1386,9 @@ textarea {
   gap: 10px;
   min-height: 44px;
   padding: 0 16px 0 12px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-medium);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--bg-subtle);
   color: var(--text);
   cursor: pointer;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
@@ -1396,7 +1401,7 @@ textarea {
 
 .identity-dialog__close:hover {
   color: var(--text);
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg-hover);
   border-color: rgba(140, 214, 193, 0.28);
   transform: translateY(-1px);
 }
@@ -1406,7 +1411,7 @@ textarea {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--border-subtle);
   flex-shrink: 0;
 }
 
