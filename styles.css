@@ -469,11 +469,12 @@ textarea {
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .header-theme-toggle:hover {
   color: var(--text);
-  background: rgba(140, 214, 193, 0.12);
+  background: rgba(42, 236, 181, 0.12);
   border-color: rgba(140, 214, 193, 0.4);
   transform: translateY(-1px);
 }
@@ -1904,7 +1905,7 @@ textarea {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1020px) {
   .site-header {
     top: 12px;
     width: calc(100% - 24px);

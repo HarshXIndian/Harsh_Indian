@@ -657,7 +657,7 @@ if (siteHeader && menuToggle) {
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 1000) {
+    if (window.innerWidth > 1020) {
       closeMenu();
     }
   });
